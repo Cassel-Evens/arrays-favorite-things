@@ -4,15 +4,19 @@ $(document).ready(function() {
     event.preventDefault();
     const yourName = $("input#Name").val();
     const yourColor = $("input#colors").val();
+    const yourMovie = $("input#Movie").val();
     const arrayName = [];
     const arrayColor = [];
+    const arrayMovie = [];
+
     arrayName.push(yourName);
     arrayColor.push(yourColor);
+    arrayMovie.push(yourMovie);
     const arrayElements = []
-    arrayElements.push(arrayName, arrayColor);
-    console.log(arrayElements);
+    arrayElements.push(arrayName, arrayColor, arrayMovie);
 
-    $("ul").prepend("<li>" + arrayName);
-    $("ul").prepend("<li>" + arrayColor);
+    $("ul").append("<li>" + arrayName);
+    $("ul").append("<li>" + arrayColor);
+    $("ul").append("<li>" + arrayMovie);
   });
 });
